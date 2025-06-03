@@ -8,8 +8,9 @@ class Conexion {
     $clave = $config['contrasena'];
     $base = $config['bd'];
     $tipo = $config['tipo'] ?? 'mysql';
+    $port = $config['port'];   
 
-    $dsn = "$tipo:host=$host;dbname=$base;charset=utf8";
+    $dsn = "$tipo:host=$host;port=$port;dbname=$dbname;charset=utf8mb4";
     $this->con = new PDO($dsn, $usuario, $clave, [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
     ]);
