@@ -26,10 +26,11 @@ require_once "firebase-php-jwt/vendor/autoload.php";
 
 $con = new Conexion(array(
     "tipo"       => "mysql",
-    "servidor"   => "sql202.infinityfree.com",
-    "bd"         => "if0_39018236_prueba",
-    "usuario"    => "if0_39018236",
-    "contrasena" => "9KXouMvOYC"
+    "servidor"   => "caboose.proxy.rlwy.net",
+    "bd"         => "railway",
+    "usuario"    => "root",
+    "port"       => "44486",
+    "contrasena" => "LtnSDbWbdaJCyOhqZreXJSMbKggVVTod"
 ));
 
 ?>
