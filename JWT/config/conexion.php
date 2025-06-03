@@ -10,7 +10,7 @@ class Conexion {
     $tipo = $config['tipo'] ?? 'mysql';
     $port = $config['port'];   
 
-    $dsn = "$tipo:host=$host;port=$port;dbname=$dbname;charset=utf8mb4";
+    $dsn = "$tipo:host=$host;port=$port;dbname=$base;charset=utf8mb4";
     $this->con = new PDO($dsn, $usuario, $clave, [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
     ]);
