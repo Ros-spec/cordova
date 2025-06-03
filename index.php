@@ -1,4 +1,4 @@
-<?php
+<?php echo 'hola';
 
 require "config/index.php";
 
