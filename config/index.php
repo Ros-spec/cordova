@@ -17,19 +17,19 @@ if ($_SERVER["REQUEST_METHOD"] == "OPTIONS") {
 
 date_default_timezone_set("America/Matamoros");
 
-require_once "conexion.php";
-require_once "enviarCorreo.php";
+require "conexion.php";
+require "enviarCorreo.php";
 # mkdir firebase-php-jwt
 # cd firebase-php-jwt
 # composer require firebase/php-jwt
-require_once "firebase-php-jwt/vendor/autoload.php";
+require "firebase-php-jwt/vendor/autoload.php";
 
 $con = new Conexion(array(
-    "tipo"       => "mysql",
-    "servidor"   => "sql202.infinityfree.com",
-    "bd"         => "if0_39018236_prueba",
-    "usuario"    => "if0_39018236",
-    "contrasena" => "9KXouMvOYC"
+     "tipo"       => "mysql",
+     "servidor"   => "fdb1028.awardspace.net",
+     "bd"         => "4636219_joomlae90723ed",
+     "usuario"    => "4636219_joomlae90723ed",
+     "contrasena" => "9KXouMvOYC"
 ));
 
 ?>
