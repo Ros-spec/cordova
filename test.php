@@ -1,4 +1,4 @@
-<?php require_once '/JWT/config/conexion.php';
+<?php require_once 'JWT/config/conexion.php';
 
     $host = "sql202.infinityfree.com";
     $bd   = "if0_39018236_prueba";
@@ -7,7 +7,7 @@
 
 header("Content-Type: application/json");
 try {
-    $pdo = new PDO("mysql:host=$host ;dbname=$bd", $user , $pw, [
+    $pdo = new PDO("mysql:host=$host;dbname=$bd", $user, $pw,[
         PDO::ATTR_TIMEOUT => 3,
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
     ]);
