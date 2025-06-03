@@ -12,7 +12,7 @@ $pass = 'LtnSDbWbdaJCyOhqZreXJSMbKggVVTod';
 
 try {
     $dsn = "mysql:host=$host;port=$port;dbname=$dbname;charset=utf8mb4";
-    $pdo = new PDO($dsn, $user, $password);
+    $pdo = new PDO($dsn, $user, $pass);
     
     // Opcional: configurar errores como excepciones
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
