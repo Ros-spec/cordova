@@ -6,22 +6,22 @@ $headers = getallheaders();
 //var_dump($headers);
 //exit;
 
-// if (!isset($headers["Authorization"])) {
-//   	http_response_code(401);
-//     echo "Token requerido.";
-//     exit;
-// }
+if (!isset($headers["Authorization"])) {
+  	http_response_code(401);
+    echo "Token requerido.";
+    exit;
+}
 
-// $token = str_replace("Bearer ", "", $headers["Authorization"]);
+$token = str_replace("Bearer ", "", $headers["Authorization"]);
 
-// try {
-// $decoded = Firebase\JWT\JWT::decode($token, new Firebase\JWT\Key("Test12345", "HS256"));
-//     $usuario = explode("/", $decoded->sub);
-//     $id   = $usuario[0];
-//     $tipo = $usuario[1];
+try {
+$decoded = Firebase\JWT\JWT::decode($token, new Firebase\JWT\Key("Test12345", "HS256"));
+    $usuario = explode("/", $decoded->sub);
+    $id   = $usuario[0];
+    $tipo = $usuario[1];
 
-    $id   = 1;
-    $tipo = 'admin';
+    // $id   = 1;
+    // $tipo = 'admin';
 
 
     if (isset($_GET["preferencias"])) {
@@ -276,12 +276,12 @@ $headers = getallheaders();
 
 
 
-// }
+}
 
-// catch (Exception $error) {
-//     http_response_code(401);
-// 	header("Content-Type: application/json");
-//     echo json_encode(array("error" => "Token inválido", "detalles" => $error->getMessage()));
-// }
+catch (Exception $error) {
+    http_response_code(401);
+	header("Content-Type: application/json");
+    echo json_encode(array("error" => "Token inválido", "detalles" => $error->getMessage()));
+}
 
 ?>
