@@ -43,7 +43,7 @@ if ($usuario && is_array($usuario)) {
 
     $payload = [
         "iat" => time(),
-        "exp" => time() + (60 * 1), // 2 horas
+        "exp" => time() + (60 * 10), // 60 seg * 10 = 10 min
         "sub" => $usuario["Id_Usuario"] . "/" . $usuario["Tipo_Usuario"]
     ];
 
