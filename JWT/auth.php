@@ -5,11 +5,11 @@ require "config/index.php";
 header("Content-Type: application/json");
 
 // Intenta leer desde $_POST o desde el cuerpo JSON crudo
-$nombre_usuario = $_POST["usuario"] ?? null;
-$contrasena     = $_POST["contrasena"] ?? null;
+// $nombre_usuario = $_POST["usuario"] ?? null;
+// $contrasena     = $_POST["contrasena"] ?? null;
 
-// $nombre_usuario = 'admin';
-// $contrasena     = 'admin';
+$nombre_usuario = 'admin';
+$contrasena     = 'admin';
 
 
 if (!$nombre_usuario || !$contrasena) {
