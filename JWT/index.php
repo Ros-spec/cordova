@@ -276,12 +276,12 @@ $decoded = Firebase\JWT\JWT::decode($token, new Firebase\JWT\Key("Test12345", "H
 
 
 
-// }
+}
 
-// catch (Exception $error) {
-//     http_response_code(401);
-// 	header("Content-Type: application/json");
-//     echo json_encode(array("error" => "Token inválido", "detalles" => $error->getMessage()));
-// }
+catch (Exception $error) {
+    http_response_code(401);
+	header("Content-Type: application/json");
+    echo json_encode(array("error" => "Token inválido", "detalles" => $error->getMessage()));
+}
 
 ?>
